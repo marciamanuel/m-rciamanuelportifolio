@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    top: 0;
+    background: black;
+}
+nav{
+    justify-content: space-between;
+    padding: 0 20px;
+
+}
+a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+
+
+.menu{
+    list-style: none;
+    overflow: hidden;
+   
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #FFF;
+    
+}
+
+nav .menu{
+
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+button:hover,
+.menu :hover{
+
+    opacity: 0 10;
+    background-color: rgb(177, 81, 81);
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    color: #FFF;
+    font-size: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: none;
+}
+
+button:focus ~ .menu{
+
+    height: 250px;
+}
+
+
+@media screen and (max-width: 800px) {
+    
+    nav, .menu{
+        flex-direction: column;
+    }
+    .menu{
+
+        text-align: center;
+    }
+    nav{
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    button{
+        display: flex
+    }
+
+    li{
+        width: 100%;
+    }
+    
+}
+
